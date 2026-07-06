@@ -1,29 +1,35 @@
 #include <iostream>
+
 using namespace std;
-int main()
-{
-  int n;
-  cout << "Enter a number: ";
-  cin >> n;
-  // n = 30 --> 1, 2, 3, 5, 6, 10, 15, 30 => NOT PRIME
-  // n = 23 --> 1, 23 => PRIME
 
-  if (n < 0){
-    n = (-1) * n;
-  }
+int main() {
+    int n;
+    cout << "Enter a number greater than 1: ";
+    cin >> n;
 
-  if (n == 0 || n == 1){
-    cout << "NOT PRIME, NOT COMPOSITE.";
-  }
-
-  for (int i = 2; i <= n / 2; i++){
-    if (n % i == 0){
-      cout << "NOT PRIME" << endl;
-      break;
+    // Edge case handling: numbers less than or equal to 1 are not prime
+    if (n <= 1) {
+        cout << "NOT PRIME" << endl;
+        return 0;
     }
-    else{
-      cout << "PRIME" << endl;
-      break;
+
+    bool isPrime = true;
+
+    // Optimized loop: only check up to the square root of n
+    for (int i = 2; i * i <= n; i++) {
+        // If n is divisible by i, it's not a prime number
+        if (n % i == 0) {
+            isPrime = false;
+            break; 
+        }
     }
-  }
+
+    // Print the final result after checking all possible divisors
+    if (isPrime) {
+        cout << "PRIME" << endl;
+    } else {
+        cout << "NOT PRIME" << endl;
+    }
+
+    return 0;
 }
