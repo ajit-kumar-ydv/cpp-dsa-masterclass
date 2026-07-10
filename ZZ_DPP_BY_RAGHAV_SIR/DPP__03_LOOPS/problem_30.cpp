@@ -5,3 +5,9 @@
 // Sample 2 — Input: 2.5-2 ⇒ Output: 0.16
 // Sample 3 — Input: 5.4 0 ⇒ Output: 1
 // Sample 4 — Input: 4.0-1 ⇒ Output: 0.25
+
+#include<iostream>
+using namespace std;
+int main(){
+  
+}
