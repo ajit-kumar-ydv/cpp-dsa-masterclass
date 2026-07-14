@@ -18,4 +18,8 @@ int main(){
     }
     cout << endl;
   }
+  cout << "MY ANSWER________" << endl
+       << "x12" << endl
+       << "3x4" << endl
+       << "56x";
 }

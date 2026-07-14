@@ -14,4 +14,8 @@ int main(){
     }
     cout << endl;
   }
+  cout << "My answer______" << endl
+       << "B" << endl
+       << "BC" << endl
+       << "BCD";
 }

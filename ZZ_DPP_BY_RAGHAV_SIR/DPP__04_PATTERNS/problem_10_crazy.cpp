@@ -18,6 +18,10 @@ int main(){
       break;
     cout << endl;
   }
+  cout << "MY ANSWER____ " << endl
+       << "1" << endl
+       << "12" << endl
+       << "123";
 }
 
 

@@ -16,4 +16,8 @@ int main()
     }
     cout << endl;
   }
+  cout << "MY ANSWER__________" << endl
+       << "1" << endl
+       << "01" << endl
+       << "101";
 }

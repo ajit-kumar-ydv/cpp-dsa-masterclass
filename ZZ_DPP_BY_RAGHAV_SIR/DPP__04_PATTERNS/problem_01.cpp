@@ -11,4 +11,5 @@ int main(){
       cout << i << j << " ";
     }
   }
+  cout <<endl<< "MY ANSWER________" << " 12 12 12 12 12 12 ";
 }

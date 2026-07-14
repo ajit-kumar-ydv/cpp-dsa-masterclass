@@ -14,4 +14,8 @@ int main(){
       cout << "*";
     cout << endl;
   }
+  cout << "MY ANSWER________" << endl
+       << "  *" << endl
+       << " **" << endl
+       << "***";
 }

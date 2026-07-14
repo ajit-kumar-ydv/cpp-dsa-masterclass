@@ -14,4 +14,8 @@ int main(){
     }
     cout << endl;
   }
+  cout << "MY ANSWER________" << endl
+       << "1 3 5" << endl
+       << "2 4 6" << endl
+       << "3 5 7";
 }

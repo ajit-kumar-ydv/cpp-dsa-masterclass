@@ -15,6 +15,7 @@ int main(){
     }
     cout << endl;
   }
+  cout << "MY ANSWER__________" << "C-A HOLLOW SQUARE WITH # BORDER.";
 }
 
 

@@ -19,3 +19,9 @@ Sample — Input: n = 5 ⇒ Output:
 ****  ****
 **********
 */
+
+#include<iostream>
+using namespace std;
+int main(){
+  
+}
