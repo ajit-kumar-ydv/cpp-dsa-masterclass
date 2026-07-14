@@ -10,7 +10,7 @@ int main(){
     }
     cout<<endl;
     // 1 loop me 3 loop
-    n--;
+    n--; // n=6 
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n+1-i;j++){ // stars (hori. flipped triangle)
             cout<<"* ";
