@@ -14,3 +14,23 @@ Sample — Input: n = 4 ⇒ Output:
  ABCBA
 ABCDCBA
 */
+
+#include<iostream>
+using namespace std;
+int main(){
+   int n;
+   cout << "Enter number: ";
+   cin >> n;
+   for (int i = 1; i <= n;i++){
+      for (int j = 1; j <= n - i;j++){
+         cout << " ";
+      }
+      for (int j = 1; j <= 2 * i - 1;j++){
+         int b = j;
+         if(b>i)
+            b = 2 * i - j;
+         cout << (char)(b + 64);
+      }
+      cout << endl;
+   }
+}

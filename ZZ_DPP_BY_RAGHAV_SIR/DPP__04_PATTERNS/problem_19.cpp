@@ -19,3 +19,24 @@ Sample — Input: n = 4 (Half rows) ⇒ Output:
 *      *
 
 */
+#include<iostream>
+using namespace std;
+int main(){
+  int n;
+  cout << "Enter number: ";
+  cin >> n;
+  for (int i = 1; i <= 2 * n;i++){
+    for (int j = 1; j <= 2 * n;j++){
+      int a = i, b = j;
+      if(a>n)
+        a = 2 * n - i+1;
+      if(b>n)
+        b = 2 * n - j+1;
+      if(a>=b)
+        cout << "*";
+      else
+        cout << " ";
+    }
+    cout << endl;
+  }
+}
