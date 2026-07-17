@@ -27,7 +27,7 @@ int main(){
         a = 2 * n - i;
       if(b>n)
         b = 2 * n - j;
-      if((a+b)==4)
+      if((a+b)==n+1)
         cout << "*";
       else
         cout << " ";
