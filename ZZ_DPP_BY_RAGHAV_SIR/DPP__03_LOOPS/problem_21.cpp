@@ -8,6 +8,11 @@
 #include<iostream>
 using namespace std;
 int main(){
-
-  
+  int k;
+  cin >> k;
+  for (int a = 1; a <= k;a++){
+    for (int b = 1; b <= k;b++){
+      cout << a << ", " << b << endl;
+    }
+  }
 }

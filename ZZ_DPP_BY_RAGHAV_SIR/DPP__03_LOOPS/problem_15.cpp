@@ -2,17 +2,23 @@
 // Sample 1 — Input: 413 ⇒ Output: 12
 // Sample 2 — Input: 520 ⇒ Output: 0
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
+int main()
+{
   int n;
   cout << "Enter a number(1-2000): ";
   cin >> n;
-  int digits_product = 1;
-  while (n != 0){
-    int ld = n % 10;
-    digits_product *= ld;
-    n /= 10;
+  if (n == 0){
+    cout << "Product = " << n;
   }
-  cout << "Product of digits = " << digits_product;
+  else{
+    int digits_product = 1;
+    while (n != 0){
+      int ld = n % 10;
+      digits_product *= ld;
+      n /= 10;
+    }
+    cout << "Product of digits = " << digits_product;
+  }
 }

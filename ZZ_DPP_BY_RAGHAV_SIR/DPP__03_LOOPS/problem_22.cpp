@@ -18,4 +18,17 @@ int main(){
       temp /= 10;
     }
   }
+  /* int temp = i;
+    bool found = false ;
+    while ( temp > 0) {
+      int digit = temp % 10;
+      if( digit == 2 || digit == 7) {
+        found = true ;
+        break ;
+      }
+      temp /= 10;
+    }
+    if( found ) cout << i << " ";
+  } */
+
 }

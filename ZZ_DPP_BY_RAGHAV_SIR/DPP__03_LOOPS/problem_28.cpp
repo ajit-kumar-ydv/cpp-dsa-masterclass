@@ -6,27 +6,33 @@
 // Sample 3 — Input: 505 ⇒ Output: Invalid Input
 
 #include <iostream>
+#include <cmath>
 using namespace std;
-int main()
-{
+int main(){
   int n;
-  cout << "Enter an integer: ";
   cin >> n;
-  bool search_prime = true;
-  int temp = n;
-  int i;
-  while (search_prime and n <= 500)
-  {
-    for (i = 2; i*i <= temp; i++)
-    {
-      if (temp % i == 0)
-      {
-        temp++;
+  if (n > 500){
+    cout << " Invalid Input " << endl;
+  }
+  else{
+    int curr = n + 1;
+    while (true){
+      bool isPrime = true;
+      if (curr <= 1)
+        isPrime = false;
+
+      for (int i = 2; i <= sqrt(curr); i++){
+        if (curr % i == 0){
+          isPrime = false;
+          break;
+        }
+      }
+
+      if (isPrime){
+        cout << curr << endl;
         break;
       }
+      curr++;
     }
-    temp++;
   }
-  if (search_prime == false)
-    cout << temp;
 }

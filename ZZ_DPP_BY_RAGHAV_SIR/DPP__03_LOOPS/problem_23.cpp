@@ -14,9 +14,10 @@ int main(){
       sum += ld;
       temp /= 10;
 
-      if(sum == 17 and temp == 0){
-        cout << i << " ";
-      }    
+      //if(sum == 17 and temp == 0){
+      //  cout << i << " ";
+      //}    
     }
+    if( sum == 17) cout << i << " ";
   }
 }

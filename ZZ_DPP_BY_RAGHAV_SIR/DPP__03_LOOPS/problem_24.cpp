@@ -9,15 +9,23 @@ using namespace std;
 int main()
 {
   int n1, n2;
-  cout << "Enter two positive integers (n1 < n2): ";
+  cout << "Enter two positive integers: ";
   cin >> n1 >> n2;
+  // swap if n1 is larger than n2
+ if( n1 > n2) {
+    int temp = n1;
+    n1 = n2;
+    n2 = temp ;
+ }
+
   for (int i = n1 + 1; i < n2; i++)
   {
     int temp = i;
-    if (temp <= 1)
-      continue;
-    int j = 2;
     bool is_prime = true;
+    if (temp <= 1)
+      is_prime = false;
+
+    int j = 2;
     while (j*j <= temp)
     {
       if (temp % j == 0){
@@ -29,22 +37,7 @@ int main()
     if (is_prime)
       cout << temp << " ";
   }
+  
+  
 
-//  int n1, n2;
-//  cout << "Enter two positive integers (n1 < n2): ";
-//  cin >> n1 >> n2;
-//  for (int i = n1 + 1; i < n2; i++)
-//  {
-//    int temp = i;
-//    int j = 2;
-//
-//    while (j < temp)
-//    {
-//      if (temp % j == 0)
-//        break;
-//      j++;
-//    }
-//    if (j == temp)
-//      cout << temp << " ";
-//  }
 }

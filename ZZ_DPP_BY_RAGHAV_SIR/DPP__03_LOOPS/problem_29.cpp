@@ -10,7 +10,8 @@ int main(){
   int n;
   cout << "Enter a positive integer: ";
   cin >> n;
-  for (int i = 2; i <= n;i++){
+  for (int i = 2; i*i <= n;i++){
+    /*
     if(n % i == 0 ){
       int temp = i;
       int j;
@@ -21,5 +22,14 @@ int main(){
       if(j == temp)
         cout << temp << " ";
     }
+        */
+
+    // SOLUTION --- DPP
+    while (n % i == 0) {
+       cout << i << " ";
+        n /= i;
+      }
   }
+  if( n > 1) cout << n << endl ;
+
 }
