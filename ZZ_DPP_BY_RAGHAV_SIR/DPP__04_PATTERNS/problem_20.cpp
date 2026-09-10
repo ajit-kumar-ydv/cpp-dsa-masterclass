@@ -25,19 +25,19 @@ int main(){
   cin >> n;
   for (int i = 1; i <= 2 * n - 1;i++){
     int a = i;
-    for (int j = 1; j <= 2 * n - 1;j++){
-      int  b = j;    
-      if(a>n)
-        a = 2 * n - i;
-      if(b>n)
-        b = 2 * n - j;
-        int t = a;
-      if((a+b)>=n+1){
-        cout << t;
-        t++;
-      }
-      else
-        cout << " ";
+    if(i>n)
+      a = 2 * n - i;
+    //SPACES
+    for (int j = 1; j <= n - a;j++){
+      cout << " ";
+    }
+    //NUMBERS
+    int print = a;
+    for (int j = 1; j <= 2 * a - 1;j++){
+      int b = j;
+      if(j>i)
+        b = 2 * a - j;
+      cout << print + b - 1;
     }
     cout << endl;
   }

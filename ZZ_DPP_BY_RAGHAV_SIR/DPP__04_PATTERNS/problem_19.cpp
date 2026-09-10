@@ -25,6 +25,7 @@ int main(){
   int n;
   cout << "Enter number: ";
   cin >> n;
+  /*
   for (int i = 1; i <= 2 * n;i++){
     for (int j = 1; j <= 2 * n;j++){
       int a = i, b = j;
@@ -36,6 +37,32 @@ int main(){
         cout << "*";
       else
         cout << " ";
+    }
+    cout << endl;
+  }
+    */
+
+  int nst = 1, nsp = 3;
+  for (int i = 1; i <= 2 * n;i++){
+    //STARS
+    for (int j = 1; j <= nst;j++){
+      cout << "*";
+    }
+    //Spaces
+    for (int j = 1; j <= 2 * nsp;j++){
+      cout << " ";
+    }
+    //STARS
+    for (int j = 1; j <= nst;j++){
+      cout << "*";
+    }
+    if(i<n){
+      nst++;
+      nsp--;
+    }
+    if(i>n){
+      nst--;
+      nsp++;
     }
     cout << endl;
   }

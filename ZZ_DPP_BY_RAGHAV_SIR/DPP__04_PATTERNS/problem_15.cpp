@@ -29,8 +29,8 @@ int main(){
       if(i>n)
         a = 2 * n - i;
       if(j>n)
-        b = 2 * n - j;
-      if(a==b or (a+b)==2*(n+1))
+        b = 2 * n - j +1;
+      if(a==b)
         cout << (char)(a+64);
       else
         cout << " ";

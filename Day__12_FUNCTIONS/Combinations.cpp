@@ -17,3 +17,4 @@ int main(){
   int ncr = fact(n) / (fact(r) * fact(n - r));
   cout << ncr;
 }
+
