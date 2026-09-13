@@ -13,7 +13,7 @@ int main(){
     string x2 = '4' + s;
     cout<<x2<<endl;
 
-    string s4 = "Raghav";
-    s4 += "Garg"; // s4 = "Raghav" + "Garg"
+    string s4 = "Ajit";
+    s4 += "Kumar"; // s4 = "Ajit" + "Kumar"
     cout<<s4<<endl;
 }
