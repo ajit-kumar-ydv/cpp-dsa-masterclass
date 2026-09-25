@@ -25,14 +25,14 @@ void merge(vector<int>& v1,vector<int>& v2,vector<int>& ans){
 void mergeSort(vector<int>& arr){
   int n = arr.size();
   if(n==1)
-    return; // 1 suzed array already sorted
+    return; // 1 sized array already sorted
   vector<int> a(n / 2);
   vector<int> b(n - n / 2);
   int idx = 0; // arr ke elements ke liye
-  for (int i = 0; i < n / 2;i++){
+  for (int i = 0; i < n / 2;i++){ // array banao
     a[i] = arr[idx++];
   }
-  for (int i = 0; i < n - n / 2;i++){
+  for (int i = 0; i < n - n / 2;i++){ // arrasy banao
     b[i] = arr[idx++];
   }
   mergeSort(a);
