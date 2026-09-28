@@ -6,7 +6,7 @@ public:
     int runs;
     float average;
     Cricketer(string name, int runs, float average){
-        (*this).name = name;
+        (*this).name = name; // this is pointer containing the object address jispe aapne constructor call lgaya hai.
         this->runs = runs;
         this->average = average;
     }

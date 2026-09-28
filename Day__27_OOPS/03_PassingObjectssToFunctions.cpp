@@ -11,31 +11,31 @@ public:
         name = n;
         cgpa = c;
     }
-    Student(int r, float c, string n){ // Parameterised Constructor
-        rno = r;
-        name = n;
-        cgpa = c;
-    }
-    Student(string n, int r){ // Parameterised Constructor
-        rno = r;
-        name = n;
-    }
     Student(){ // Default Constructor
         
     }
+    void print(){
+      cout << name << " " << rno << " " << cgpa << endl;
+    }
 };
+
+void change(Student s){
+  s.name = "Akash";
+}
+void changeOk(Student& s){
+  s.name = "Changed";
+}
+
 int main(){
     // Student x;
     // x.name = "Sumit";
     // x.rno = 39;
     // x.cgpa = 8.7;
 
-    Student x("Sumit",8.7,39); 
-    cout<<x.name<<" "<<x.rno<<" "<<x.cgpa<<endl;
-
-    Student y(1049,9.75,"Manish"); 
-
-    Student z("Ikram",42); 
-
-    Student alpha;
+    Student x("Sumit",8.7,39);
+    change(x); // paas by value ---> no change
+    x.print();
+    // paas by reference ke liye & use krna hoga
+    changeOk(x);
+    x.print();
 }

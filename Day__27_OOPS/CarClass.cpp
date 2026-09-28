@@ -16,7 +16,7 @@ void print(Car x){
 }
 
 int main(){
-    Car c1;
+    Car c1; // car --> class hai |||| c1 --> yek object
     c1.isE20Compatible = true;
     c1.name = "Kia Sonet";
     c1.power = 118;
