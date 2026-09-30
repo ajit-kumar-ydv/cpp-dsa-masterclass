@@ -1,0 +1,85 @@
+#include<iostream>
+using namespace std;
+class MyVector{ // User Defined Data Structure
+private:
+  int length; // kitne elements hai vector me
+  int* arr;
+  int cap;
+public:
+  MyVector(int capacity, int default_value){
+    length= cap = capacity;
+    arr = new int[capacity];
+    for (int i = 0; i < capacity;i++){
+      arr[i] = default_value;
+    }
+  }
+  
+  int size(){
+    return length;
+  }
+  int capacity(){
+    return cap;
+  }
+  void pop_back(){
+    if(length == 0){
+      cout << "Array is empty" << endl;
+      return;
+    }
+    length--;
+  }
+  void push_back(int val){
+    if(length==cap){// array is full
+      // double the capacity & copy paste
+      cap = 2 * cap;
+      int* temp=new int[cap];
+      for (int i = 0; i < length;i++){
+        temp[i] = arr[i];
+      }
+      delete[] arr;
+      arr = temp;
+    }
+    
+    arr[length] = val;
+    length++;
+  }
+
+  int get(int idx){
+    if(idx<0 || idx >= length){
+      cout << "Index out of bound" << endl;
+      return -1;
+    }
+    return arr[idx];
+  }
+
+  void set(int idx,int newVal){
+    if(idx<0 || idx >= length){
+    cout << "Index out of bound" << endl;
+    return;
+    }
+    arr[idx] = newVal;
+  }
+
+  void print(){
+    for (int i = 0; i < length;i++){
+      cout << arr[i] << " ";
+    }
+    cout << endl;
+  }
+};
+int main(){
+  MyVector v(5, -1); // vector<int> v(5,-1);
+  v.print();
+  v.pop_back();
+  v.print();
+  v.push_back(10);
+  v.print();
+  v.push_back(20);
+  v.print();
+  cout<<v.get(2)<<endl;
+  v.set(2, 30);
+  cout << v.get(2);
+
+  // int b[] = {67, 21, 8, 2};
+  // int* arr = b; //actually arr--> storing &b[0],,,,,I KNOW IT.
+  // cout<<arr[0]<<endl;
+}
