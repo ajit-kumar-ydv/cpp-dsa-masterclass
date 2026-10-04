@@ -135,4 +135,5 @@ int main(){
     // list.length = 0; ERROR
     // list.head = NULL; ERROR
     cout<<list.size()<<endl;
+    cout << list.get(0);
 }
